@@ -1,15 +1,7 @@
 body {
-  background: #e9ceff;
+  background: rgb(230, 207, 245);
   font-family: "Sansita", sans-serif;
   color: rgb(133, 47, 190);
-}
-.weatherApp {
-  max-width: 800px;
-  margin: 30px auto;
-  padding: 20px;
-  border: 1px solid rgb(173, 173, 173);
-  background-color: rgb(253, 250, 255);
-  border-radius: 10px;
 }
 
 h1 {
@@ -22,6 +14,18 @@ ul {
 
 li {
   list-style: none;
+}
+
+.weatherAppWrapper {
+  max-width: 800px;
+  margin: 30px auto;
+}
+
+.weatherApp {
+  padding: 20px;
+  border: 1px solid rgb(173, 173, 173);
+  background-color: rgb(253, 250, 255);
+  border-radius: 10px;
 }
 
 .day {
