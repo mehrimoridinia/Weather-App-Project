@@ -1,0 +1,9 @@
+body {
+  background: linear-gradient(to top, #d299c2 0%, #fef9d7 100%);
+}
+.weatherApp {
+  max-width: 800px;
+  margin: 30px auto;
+  padding: 20px;
+  border: 1px solid rgb(251, 255, 56);
+}
