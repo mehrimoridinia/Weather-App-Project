@@ -1,9 +1,29 @@
 body {
-  background: linear-gradient(to top, #d299c2 0%, #fef9d7 100%);
+  background: #e9ceff;
+  font-family: "Sansita", sans-serif;
+  color: rgb(133, 47, 190);
 }
 .weatherApp {
   max-width: 800px;
   margin: 30px auto;
   padding: 20px;
-  border: 1px solid rgb(251, 255, 56);
+  border: 1px solid rgb(173, 173, 173);
+  background-color: rgb(253, 250, 255);
+  border-radius: 10px;
+}
+
+h1 {
+  font-weight: bolder;
+}
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+.day {
+  font-weight: 600;
 }
