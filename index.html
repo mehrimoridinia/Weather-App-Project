@@ -17,6 +17,7 @@
       src="https://kit.fontawesome.com/c7efbfbec6.js"
       crossorigin="anonymous"
     ></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <link rel="stylesheet" href="src/style.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Sansita&display=swap"
@@ -40,7 +41,8 @@
               <span class="dayIcon">
                 <i class="fa-solid fa-sun"></i>
               </span>
-              12<span class="units"
+              <span id="temprature">12</span
+              ><span class="units"
                 >°C |
                 <a href="http://" class="unitF" rel="noopener noreferrer"
                   >°F</a
@@ -49,15 +51,14 @@
             </div>
             <div class="col-md-4">
               <ul>
-                <li>New York</li>
+                <li id="city">New York</li>
                 <li>Friday 07:00</li>
-                <li>Clear</li>
+                <li id="description">Clear</li>
               </ul>
             </div>
             <div class="col-md-4">
-              <li>Percipitation: 0%</li>
-              <li>Humidity: 87%</li>
-              <li>Wind: 10 km/h</li>
+              <li>Humidity: <span id="humidity">87</span>%</li>
+              <li>Wind: <span id="wind">10</span> km/h</li>
             </div>
           </div>
         </div>
