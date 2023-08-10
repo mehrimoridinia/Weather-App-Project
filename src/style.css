@@ -29,4 +29,23 @@ li {
 
 .day {
   font-weight: 600;
+  margin-top: 30px;
+}
+
+.dayTemp {
+  font-size: 36px;
+}
+
+.dayIcon {
+  font-size: 56px;
+  color: rgb(255, 208, 0);
+  text-shadow: rgb(133, 47, 190) 1px 1px 2px;
+  margin-right: 10px;
+}
+
+.units {
+  font-size: 16px;
+  font-weight: 500;
+  position: relative;
+  top: -15px;
 }
