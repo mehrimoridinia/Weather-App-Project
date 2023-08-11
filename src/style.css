@@ -27,8 +27,8 @@ li::first-letter {
 
 .weatherApp {
   padding: 20px;
-  border: 1px solid rgb(253, 250, 255);
-  background: rgb(246, 235, 255);
+  border: 2px dashed rgb(133, 47, 190);
+  background: rgb(249, 245, 252);
   border-radius: 10px;
 }
 
@@ -40,6 +40,11 @@ li::first-letter {
 .dayTemp {
   font-size: 46px;
   font-weight: 500;
+}
+
+.dayIcon {
+  margin: 0px;
+  padding: 0px;
 }
 
 .units {
