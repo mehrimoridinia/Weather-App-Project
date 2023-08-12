@@ -41,7 +41,6 @@ function displaytemp(response) {
   );
   iconElement.setAttribute("alt", response.data.weather[0].description);
 }
-let city = "Tehran";
 
 function search(city) {
   let apiKey = "082d3d02ffdb12f2fd9b259e2ced1d0d";
@@ -50,13 +49,14 @@ function search(city) {
 }
 
 // make the search box working
+
 function handleSubmit(event) {
   event.preventDefault();
   let cityInputElement = document.querySelector("#city-input");
-  console.log(cityInputElement.value);
+  search(cityInputElement.value);
 }
 
-search();
+search("Tehran");
 
 let form = document.querySelector(".searchForm");
 form.addEventListener("submit", handleSubmit);
