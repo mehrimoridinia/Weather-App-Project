@@ -41,9 +41,22 @@ function displaytemp(response) {
   );
   iconElement.setAttribute("alt", response.data.weather[0].description);
 }
-
-let apiKey = "082d3d02ffdb12f2fd9b259e2ced1d0d";
 let city = "Tehran";
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric `;
 
-axios.get(apiUrl).then(displaytemp);
+function search(city) {
+  let apiKey = "082d3d02ffdb12f2fd9b259e2ced1d0d";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric `;
+  axios.get(apiUrl).then(displaytemp);
+}
+
+// make the search box working
+function handleSubmit(event) {
+  event.preventDefault();
+  let cityInputElement = document.querySelector("#city-input");
+  console.log(cityInputElement.value);
+}
+
+search();
+
+let form = document.querySelector(".searchForm");
+form.addEventListener("submit", handleSubmit);

@@ -35,7 +35,29 @@
     <div class="container">
       <div class="weatherAppWrapper">
         <div class="weatherApp">
-          <h1>Howday <i class="fa-regular fa-sun"></i></h1>
+          <div class="row heading">
+            <div class="col-md-4">
+              <h1>Howday <i class="fa-regular fa-sun"></i></h1>
+            </div>
+            <div class="col">
+              <form class="input-group searchForm">
+                <input
+                  type="search"
+                  class="form-control searchBox"
+                  placeholder="Enter a city..."
+                  id="city-input"
+                />
+                <div class="input-group-append">
+                  <button
+                    class="btn btn-outline-secondary searchButton"
+                    type="button"
+                  >
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
           <div class="row day">
             <div class="col-md-4 dayTemp">
               <img src="" alt="weather-icon" id="icon" class="dayIcon" />
