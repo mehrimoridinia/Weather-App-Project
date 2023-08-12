@@ -60,3 +60,15 @@ search("Tehran");
 
 let form = document.querySelector(".searchForm");
 form.addEventListener("submit", handleSubmit);
+
+// make the units working
+
+function displayFarenheitTemp(event) {
+  event.preventDefault();
+  let farenheitTemp = (14 * 6) / 5 + 32;
+  let tempratureElement = document.querySelector("#temprature");
+  tempratureElement.innerHTML = Math.round(farenheitTemp);
+}
+
+let unitf = document.querySelector("#unitF");
+unitf.addEventListener("click", displayFarenheitTemp);
