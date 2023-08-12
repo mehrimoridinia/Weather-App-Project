@@ -27,7 +27,11 @@
   </head>
   <body
     style="
-      background: linear-gradient(to top, rgb(177, 95, 231) 0%, #f6f3ff 100%);
+      background: linear-gradient(
+        to top,
+        rgb(177, 95, 231) 20%,
+        rgb(213, 169, 243) 80%
+      );
       background-repeat: no-repeat;
       background-attachment: fixed;
     "
@@ -39,13 +43,14 @@
             <div class="col-md-4">
               <h1>Howday <i class="fa-regular fa-sun"></i></h1>
             </div>
-            <div class="col">
+            <div class="col search">
               <form class="input-group searchForm">
                 <input
                   type="search"
                   class="form-control searchBox"
                   placeholder="Enter a city..."
                   id="city-input"
+                  autocomplete="off"
                 />
                 <div class="input-group-append">
                   <button
