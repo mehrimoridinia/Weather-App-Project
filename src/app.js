@@ -29,6 +29,9 @@ function displaytemp(response) {
   let windElement = document.querySelector("#wind");
   let dateElement = document.querySelector("#date");
   let iconElement = document.querySelector("#icon");
+
+  celsiusTemp = response.data.main.temp;
+
   tempratureElement.innerHTML = Math.round(response.data.main.temp);
   cityElement.innerHTML = response.data.name;
   descriptionElement.innerHTML = response.data.weather[0].description;
@@ -56,8 +59,6 @@ function handleSubmit(event) {
   search(cityInputElement.value);
 }
 
-search("Tehran");
-
 let form = document.querySelector(".searchForm");
 form.addEventListener("submit", handleSubmit);
 
@@ -65,10 +66,28 @@ form.addEventListener("submit", handleSubmit);
 
 function displayFarenheitTemp(event) {
   event.preventDefault();
-  let farenheitTemp = (14 * 6) / 5 + 32;
   let tempratureElement = document.querySelector("#temprature");
+  // remove the active class the celsius linl
+  unitC.classList.remove("active");
+  unitf.classList.add("active");
+  let farenheitTemp = (celsiusTemp * 6) / 5 + 32;
   tempratureElement.innerHTML = Math.round(farenheitTemp);
 }
 
+function displayCelsiusTemp(event) {
+  event.preventDefault();
+  let tempratureElement = document.querySelector("#temprature");
+  unitC.classList.add("active");
+  unitf.classList.remove("active");
+  tempratureElement.innerHTML = Math.round(celsiusTemp);
+}
+
+let celsiusTemp = null;
+
 let unitf = document.querySelector("#unitF");
 unitf.addEventListener("click", displayFarenheitTemp);
+
+let unitC = document.querySelector("#unitC");
+unitC.addEventListener("click", displayCelsiusTemp);
+
+search("Tehran");

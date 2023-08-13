@@ -21,6 +21,10 @@ li::first-letter {
   text-transform: capitalize;
 }
 
+a {
+  text-decoration-line: none;
+}
+
 .weatherAppWrapper {
   max-width: 800px;
   margin: 30px auto;
@@ -44,6 +48,11 @@ li::first-letter {
   font-weight: 500;
 }
 
+.dayTemp .active {
+  color: rgb(133, 47, 190);
+  cursor: default;
+}
+
 .dayIcon {
   margin: 0px;
   padding: 0px;
@@ -51,7 +60,7 @@ li::first-letter {
 
 .units {
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 700;
   position: relative;
   top: -20px;
 }
