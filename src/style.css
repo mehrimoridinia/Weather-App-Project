@@ -25,6 +25,17 @@ a {
   text-decoration-line: none;
 }
 
+small {
+  color: #faf3ff;
+  font-family: "Gabriela", serif;
+}
+
+.source {
+  color: #faf3ff;
+  font-family: "Gabriela", serif;
+  text-decoration-line: underline;
+}
+
 .weatherAppWrapper {
   max-width: 800px;
   margin: 30px auto;
