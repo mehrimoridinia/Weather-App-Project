@@ -21,6 +21,36 @@ function formatdate(timestamp) {
   return `${day} ${hours}:${minutes}`;
 }
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let forecastHTML = `<div class="row">`;
+  let days = ["Thu", "Fri", "Sat", "Sun"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+    <div class="col-2">
+      <div class="weather-forecast-date">${day}</div>
+        <div>
+          <img
+          src="http://openweathermap.org/img/wn/50d@2x.png"
+          alt=""
+          width="70"
+          />
+        </div>
+        <div class="weather-forecast-temp">
+        <span class="weather-forecast-highTemp">18° </span>
+        <span class="weather-forecast-lowTemp"> 12°</span>
+      </div>
+    </div>
+  `;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
 function displaytemp(response) {
   let tempratureElement = document.querySelector("#temprature");
   let cityElement = document.querySelector("#city");
@@ -91,3 +121,4 @@ let unitC = document.querySelector("#unitC");
 unitC.addEventListener("click", displayCelsiusTemp);
 
 search("Tehran");
+displayForecast();
