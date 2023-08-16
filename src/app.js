@@ -21,7 +21,9 @@ function formatdate(timestamp) {
   return `${day} ${hours}:${minutes}`;
 }
 
-function displayForecast() {
+function displayForecast(response) {
+  console.log(response.data.daily);
+
   let forecastElement = document.querySelector("#forecast");
 
   let forecastHTML = `<div class="row">`;
@@ -51,6 +53,13 @@ function displayForecast() {
   forecastElement.innerHTML = forecastHTML;
 }
 
+function getForecast(coordinates) {
+  let apiKey = "082d3d02ffdb12f2fd9b259e2ced1d0d";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&units=metric&appid=${apiKey}`;
+  console.log(apiUrl);
+  axios.get(apiUrl).then(displayForecast);
+}
+
 function displaytemp(response) {
   let tempratureElement = document.querySelector("#temprature");
   let cityElement = document.querySelector("#city");
@@ -73,6 +82,8 @@ function displaytemp(response) {
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
   iconElement.setAttribute("alt", response.data.weather[0].description);
+
+  getForecast(response.data.coord);
 }
 
 function search(city) {
@@ -97,7 +108,7 @@ form.addEventListener("submit", handleSubmit);
 function displayFarenheitTemp(event) {
   event.preventDefault();
   let tempratureElement = document.querySelector("#temprature");
-  // remove the active class the celsius linl
+  // remove the active class the celsius link
   unitC.classList.remove("active");
   unitf.classList.add("active");
   let farenheitTemp = (celsiusTemp * 6) / 5 + 32;
@@ -121,4 +132,3 @@ let unitC = document.querySelector("#unitC");
 unitC.addEventListener("click", displayCelsiusTemp);
 
 search("Tehran");
-displayForecast();
